@@ -1,0 +1,42 @@
+# ===== 本地开发工具与临时文件 =====
+.dev/
+.probe/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# ===== 服务器配置文件（含数据库密码 / DeepSeek API Key，禁止提交）=====
+public/config.php
+
+# ===== 运行时数据（走势文件按名字存放在 data/trends/，仅内置种子入库）=====
+public/data/trends/*.php
+!public/data/trends/default.php
+!public/data/trends/volatile.php
+public/data/trends/*.tmp*
+public/data/*.tmp*
+public/data/php-errors.log
+public/data/backups/
+public/data/previews/
+public/data/cache/
+
+# ===== 用户上传的图片 =====
+public/uploads/*
+!public/uploads/.gitkeep
+
+# ===== 上传脚本里的 FTP 凭据 =====
+ftp-凭据.txt
+deepseek.txt
+
+# ===== 临时数据库迁移保护 Key =====
+public/.thp-migration-key.php
+
+# ===== 发布前线上备份（含数据库快照） =====
+.deploy-backups/
+
+# ===== 现场资料、题库、兑换二维码与个人数据，禁止进入公开仓库 =====
+docs/qrcode/
+docs/qrcode.zip
+docs/*.docx
+docs/private/
+tools/*-2026*.php
